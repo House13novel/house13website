@@ -131,14 +131,6 @@ main {
     margin: 0 auto;
     padding: 0 var(--spacing-sm);
 }
-
-.book-showcase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 500px;
-}
-
 .book-cover {
     width: 100%;
     max-width: 350px;
