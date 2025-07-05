@@ -352,7 +352,8 @@ footer a:hover {
     }
 
     .book-showcase {
-        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: center;
         text-align: center;
         gap: var(--spacing-md);
     }
