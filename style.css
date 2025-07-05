@@ -47,6 +47,7 @@ body {
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid var(--medium-gray);
+    transition: transform 0.3s ease;
 }
 
 .nav-container {
@@ -131,6 +132,15 @@ main {
     margin: 0 auto;
     padding: 0 var(--spacing-sm);
 }
+
+.book-showcase {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    min-height: 500px;
+}
+
 .book-cover {
     width: 100%;
     max-width: 350px;
@@ -306,66 +316,6 @@ footer a {
 
 footer a:hover {
     color: var(--light-red);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background-color: var(--white);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: var(--spacing-md) 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .book-showcase {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        gap: var(--spacing-md);
-    }
-
-    .book-info h1 {
-        font-size: 2.5rem;
-    }
-
-    .tagline {
-        font-size: 1.1rem;
-    }
-
-    .cta-buttons {
-        justify-content: center;
-    }
-
-    .description h2,
-    .preview h2 {
-        font-size: 2rem;
-    }
 }
 
 /* Contact form styles */
@@ -775,8 +725,64 @@ footer a:hover {
     font-size: 1.8rem;
 }
 
-/* Enhanced responsive design */
+/* Responsive design */
 @media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: var(--spacing-md) 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .book-showcase {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+
+    .book-info h1 {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .description h2,
+    .preview h2 {
+        font-size: 2rem;
+    }
+
     .page-hero h1 {
         font-size: 2.5rem;
     }
@@ -796,9 +802,4 @@ footer a:hover {
         flex-direction: column;
         align-items: center;
     }
-}
-
-/* Navbar scroll effect */
-.navbar {
-    transition: transform 0.3s ease;
 }
