@@ -133,9 +133,8 @@ main {
 }
 
 .book-showcase {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
     align-items: center;
     min-height: 500px;
 }
