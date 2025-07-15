@@ -234,6 +234,37 @@ main {
     line-height: 1.8;
 }
 
+/* Description layout with image */
+.description-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.hallway-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.hallway-img:hover {
+    transform: translateY(-5px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .description-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .description-image {
+        order: -1; /* Put image above text on mobile */
+    }
+}
 .lead {
     font-size: 1.3rem;
     color: var(--primary-red);
